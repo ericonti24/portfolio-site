@@ -24,7 +24,7 @@ export const PROJECTS = [
         image: "/_next/static/media/portfolio-site.52c93f03.png",
         title: "Portfolio Site", 
         description: "Personal portfolio site to display other development projects and share about and contact information. Using React framework Next.js and Chakra UI for styling. Hosted on Vercel.",
-        link: "https://portfoliowebpage-nextjs.vercel.app/",
-        github: "https://github.com/ericonti24/portfoliowebpage-nextjs"
+        link: "https://ericontiveros-portfolio-site.vercel.app/",
+        github: "https://github.com/ericonti24/portfolio-site"
     }
 ]
