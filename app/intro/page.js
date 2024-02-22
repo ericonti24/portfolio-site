@@ -17,7 +17,7 @@ import {
 // console.log(selfImage);
 
 const IntroSection = () => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
+//   const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <Container maxWidth="7xl" p={{ base: 2, sm: 10 }} >
@@ -33,7 +33,7 @@ const IntroSection = () => {
           <Heading as="h1" fontSize="8xl" fontWeight="bold" mb={2} fontFamily='sans-serif' color='teal'>
             Hi, I'm Eric
           </Heading>
-          <Text fontSize="2xl" color={useColorModeValue("lightgray", "lightgray.400")} mb={1}>
+          <Text fontSize="2xl" color='lightgray' mb={1}>
             I enjoy web designing, developing and passionate about tech!
           </Text>
         </Box>
