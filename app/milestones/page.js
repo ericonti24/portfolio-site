@@ -1,4 +1,111 @@
 'use client'
+// import React from 'react';
+// import {
+//   Box,
+//   chakra,
+//   Container,
+//   Text,
+//   HStack,
+//   VStack,
+//   Flex,
+//   useColorModeValue,
+//   useBreakpointValue
+// } from '@chakra-ui/react';
+// import { MILESTONES } from '../api/milestones/milestonesData';
+
+// const Milestones = () => {
+//   const isMobile = useBreakpointValue({ base: true, md: false, ssr: false });
+//   const isDesktop = useBreakpointValue({ base: false, md: true, ssr: false });
+
+//   return (
+//     <Container id='milestones-section' maxWidth="7xl" p={{ base: 2, sm: 10 }}>
+//       <chakra.h3 fontSize="4xl" fontWeight="bold" mb={4} textAlign="center" color={'white'}>
+//         MILESTONES
+//       </chakra.h3>
+//       {MILESTONES.map((milestone) => (
+//         <Flex key={milestone.id} mb="10px">
+//           {/* Desktop view(left card) */}
+//           {isDesktop && milestone.id % 2 === 0 && (
+//             <>
+//               <EmptyCard />
+//               <LineWithDot />
+//               <Card {...milestone} />
+//             </>
+//           )}
+//           {/* Mobile view */}
+//           {isMobile && (
+//             <>
+//               <LineWithDot />
+//               <Card {...milestone} />
+//             </>
+//           )}
+//           {/* Desktop view(right card) */}
+//           {isDesktop && milestone.id % 2 !== 0 && (
+//             <>
+//               <Card {...milestone} />
+
+//               <LineWithDot />
+//               <EmptyCard />
+//             </>
+//           )}
+//         </Flex>
+//       ))}
+//     </Container>
+//   );
+// };
+
+// const Card = ({ id, title, description, date }) => {
+//   const isEvenId = id % 2 == 0;
+//   let borderWidthValue = isEvenId ? '15px 15px 15px 0' : '15px 0 15px 15px';
+//   let leftValue = isEvenId ? '-15px' : 'unset';
+//   let rightValue = isEvenId ? 'unset' : '-15px';
+
+//   const isMobile = useBreakpointValue({ base: true, md: false });
+//   if (isMobile) {
+//     leftValue = '-15px';
+//     rightValue = 'unset';
+//     borderWidthValue = '15px 15px 15px 0';
+//   }
+
+//   return (
+//     <HStack
+//       flex={1}
+//       p={{ base: 3, sm: 6 }}
+//     //   bg={useColorModeValue('gray', 'gray.800')}
+//      bg='white'
+//       spacing={5}
+//       rounded="lg"
+//       alignItems="center"
+//       pos="relative"
+//       _before={{
+//         content: `""`,
+//         w: '0',
+//         h: '0',
+//         borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
+//         borderStyle: 'solid',
+//         borderWidth: borderWidthValue,
+//         position: 'absolute',
+//         left: leftValue,
+//         right: rightValue,
+//         display: 'block'
+//       }}
+//     >
+//       <Box>
+//         <Text fontSize="lg" color={isEvenId ? 'teal' : 'black'}>
+//           {date}
+//         </Text>
+
+//         <VStack spacing={2} mb={3} textAlign="left">
+//           <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+//             {title}
+//           </chakra.h1>
+//           <Text fontSize="md">{description}</Text>
+//         </VStack>
+//       </Box>
+//     </HStack>
+//   );
+// };
+
 import React from 'react';
 import {
   Box,
@@ -8,9 +115,10 @@ import {
   HStack,
   VStack,
   Flex,
-  useColorModeValue,
-  useBreakpointValue
+  useBreakpointValue, 
+  useColorModeValue
 } from '@chakra-ui/react';
+
 import { MILESTONES } from '../api/milestones/milestonesData';
 
 const Milestones = () => {
@@ -24,7 +132,6 @@ const Milestones = () => {
       </chakra.h3>
       {MILESTONES.map((milestone) => (
         <Flex key={milestone.id} mb="10px">
-          {/* Desktop view(left card) */}
           {isDesktop && milestone.id % 2 === 0 && (
             <>
               <EmptyCard />
@@ -32,18 +139,15 @@ const Milestones = () => {
               <Card {...milestone} />
             </>
           )}
-          {/* Mobile view */}
           {isMobile && (
             <>
               <LineWithDot />
               <Card {...milestone} />
             </>
           )}
-          {/* Desktop view(right card) */}
           {isDesktop && milestone.id % 2 !== 0 && (
             <>
               <Card {...milestone} />
-
               <LineWithDot />
               <EmptyCard />
             </>
@@ -53,14 +157,14 @@ const Milestones = () => {
     </Container>
   );
 };
-
 const Card = ({ id, title, description, date }) => {
-  const isEvenId = id % 2 == 0;
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const isEvenId = id % 2 === 0;
   let borderWidthValue = isEvenId ? '15px 15px 15px 0' : '15px 0 15px 15px';
   let leftValue = isEvenId ? '-15px' : 'unset';
   let rightValue = isEvenId ? 'unset' : '-15px';
 
-  const isMobile = useBreakpointValue({ base: true, md: false });
   if (isMobile) {
     leftValue = '-15px';
     rightValue = 'unset';
@@ -71,34 +175,35 @@ const Card = ({ id, title, description, date }) => {
     <HStack
       flex={1}
       p={{ base: 3, sm: 6 }}
-    //   bg={useColorModeValue('gray', 'gray.800')}
-     bg='white'
+      bg='white'
       spacing={5}
       rounded="lg"
       alignItems="center"
       pos="relative"
-      _before={{
-        content: `""`,
-        w: '0',
-        h: '0',
-        borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
-        borderStyle: 'solid',
-        borderWidth: borderWidthValue,
-        position: 'absolute',
-        left: leftValue,
-        right: rightValue,
-        display: 'block'
+      style={{
+        position: 'relative',
+        before: {
+          content: '""',
+          width: '0',
+          height: '0',
+          borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
+          borderStyle: 'solid',
+          borderWidth: borderWidthValue,
+          position: 'absolute',
+          left: leftValue,
+          right: rightValue,
+          display: 'block'
+        }
       }}
     >
       <Box>
         <Text fontSize="lg" color={isEvenId ? 'teal' : 'black'}>
           {date}
         </Text>
-
         <VStack spacing={2} mb={3} textAlign="left">
-          <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+          <h1 style={{ fontSize: '2xl', lineHeight: '1.2', fontWeight: 'bold', width: '100%' }}>
             {title}
-          </chakra.h1>
+          </h1>
           <Text fontSize="md">{description}</Text>
         </VStack>
       </Box>
