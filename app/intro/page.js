@@ -2,11 +2,8 @@
 import React from 'react';
 import {
   Box,
-  chakra,
   Container,
   Text,
-  HStack,
-  VStack,
   Flex,
   Heading,
   useColorModeValue,
@@ -14,13 +11,12 @@ import {
   Grid,
   Image
 } from '@chakra-ui/react';
-import selfImage from '../api/img_bnr/self-image3.png'
+// import selfImage from '../api/img_bnr/self-image3.png'
 
-console.log(selfImage);
+// console.log(selfImage);
 
 const IntroSection = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
-  // const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
     <Container maxWidth="7xl" p={{ base: 2, sm: 10 }} >
@@ -40,19 +36,19 @@ const IntroSection = () => {
             I enjoy web designing, developing and passionate about tech!
           </Text>
         </Box>
-        {!isMobile && (
+        {/* {!isMobile && (
           <Box>
             <Image src={"/_next/static/media/self-image3.f98e0bfe.png"} alt="Eric's Image" borderRadius="15px 90px" boxSize="500px" />
           </Box>
-        )}
+        )} */}
       </Grid>
-      {isMobile && (
+      {/* {isMobile && (
         <Flex justifyContent="center" mt={8} mb={20}>
           <Box>
             <Image src={"/_next/static/media/self-image3.f98e0bfe.png"} alt="Eric's Image" borderRadius="15px 90px" boxSize="300px" />
           </Box>
         </Flex>
-      )}
+      )} */}
     </Container>
   );
 };
