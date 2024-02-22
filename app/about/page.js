@@ -11,7 +11,8 @@ const AboutSection = () => {
       gap={8}
       justifyItems="center"
       textAlign='center'
-      mt={8}
+      mt={40}
+      mb={40}
       border='1px solid white'
       bg='white'
     >
