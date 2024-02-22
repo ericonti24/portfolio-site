@@ -106,6 +106,51 @@
 //   );
 // };
 
+// const LineWithDot = () => {
+//   return (
+//     <Flex
+//       pos="relative"
+//       alignItems="center"
+//       mr={{ base: '40px', md: '40px' }}
+//       ml={{ base: '0', md: '40px' }}
+//     >
+//       <chakra.span
+//         position="absolute"
+//         left="50%"
+//         height="calc(100% + 10px)"
+//         border="1px solid"
+//         borderColor={useColorModeValue('gray.200', 'gray.700')}
+//         top="0px"
+//       ></chakra.span>
+//       <Box pos="relative" p="10px">
+//         <Box
+//           pos="absolute"
+//           top="0"
+//           left="0"
+//           bottom="0"
+//           right="0"
+//           width="100%"
+//           height="100%"
+//           backgroundSize="cover"
+//           backgroundRepeat="no-repeat"
+//           backgroundPosition="center center"
+//           bg={useColorModeValue('teal')}
+//           borderRadius="100px"
+//           backgroundImage="none"
+//           opacity={1}
+//         ></Box>
+//       </Box>
+//     </Flex>
+//   );
+// };
+
+// const EmptyCard = () => {
+//   return <Box flex={{ base: 0, md: 1 }} p={{ base: 0, md: 6 }} bg="transparent"></Box>;
+// };
+
+// export default Milestones;
+
+
 import React from 'react';
 import {
   Box,
@@ -115,8 +160,8 @@ import {
   HStack,
   VStack,
   Flex,
-  useBreakpointValue, 
-  useColorModeValue
+  useBreakpointValue,
+  useColorModeValue // Import useColorModeValue
 } from '@chakra-ui/react';
 
 import { MILESTONES } from '../api/milestones/milestonesData';
@@ -157,6 +202,7 @@ const Milestones = () => {
     </Container>
   );
 };
+
 const Card = ({ id, title, description, date }) => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
@@ -170,6 +216,9 @@ const Card = ({ id, title, description, date }) => {
     rightValue = 'unset';
     borderWidthValue = '15px 15px 15px 0';
   }
+
+  // Use useColorModeValue for dynamic color switching
+  const borderColorValue = useColorModeValue('#edf2f6', '#1a202c');
 
   return (
     <HStack
@@ -186,7 +235,7 @@ const Card = ({ id, title, description, date }) => {
           content: '""',
           width: '0',
           height: '0',
-          borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
+          borderColor: `transparent ${borderColorValue} transparent`, // Use borderColorValue
           borderStyle: 'solid',
           borderWidth: borderWidthValue,
           position: 'absolute',
