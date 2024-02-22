@@ -25,9 +25,8 @@ export default function ChakraNavBar({ scrollToSection }) {
       position="sticky"
       top="0"
       zIndex="999"
-      borderRadius="10"
-      maxW={{ base: '100%', md: '100%', lg: '100%' }} // Adjust max width based on screen size
-      mx="auto" // Center the navbar horizontally
+      maxW={{ base: '100%', md: '100%', lg: '100%' }} 
+      mx="auto" 
     >
       <Button
         onClick={reloadPage}

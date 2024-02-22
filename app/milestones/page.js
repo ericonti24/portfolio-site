@@ -14,8 +14,8 @@ import {
 import { MILESTONES } from '../api/milestones/milestonesData';
 
 const Milestones = () => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
-  const isDesktop = useBreakpointValue({ base: false, md: true });
+  const isMobile = useBreakpointValue({ base: true, md: false, ssr: false });
+  const isDesktop = useBreakpointValue({ base: false, md: true, ssr: false });
 
   return (
     <Container id='milestones-section' maxWidth="7xl" p={{ base: 2, sm: 10 }}>
