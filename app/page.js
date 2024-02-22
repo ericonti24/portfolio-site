@@ -27,7 +27,7 @@ export default function Home() {
       <div id='home-section'>
           <ChakraNavBar scrollToSection={scrollToSection}/>
           <IntroSection />
-          {/* <Milestones /> */}
+          <Milestones />
           <AboutSection />
           <ProjectSection />
         </div>
