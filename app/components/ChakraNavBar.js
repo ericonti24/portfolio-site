@@ -15,7 +15,7 @@ export default function ChakraNavBar({ scrollToSection }) {
   return (
     <Flex
       
-      p="5"
+      p="4"
       bg="black"
       color="white"
       alignItems="center"
