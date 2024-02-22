@@ -10,10 +10,10 @@ import {
   Grid,
   Image
 } from '@chakra-ui/react';
+import selfImage from '../api/img_bnr/self-image3.png'
 
 const IntroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const selfImage = "/_next/static/media/self-image3.f98e0bfe.png"
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,14 +46,14 @@ const IntroSection = () => {
         </Box>
         {!isMobile && (
           <Box>
-            <Image src={selfImage} alt="Eric's Image" borderRadius="15px 90px" boxSize="500px" />
+            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="15px 90px" boxSize="500px" />
           </Box>
         )}
       </Grid>
       {isMobile && (
         <Flex justifyContent="center" mt={8} mb={20}>
           <Box>
-            <Image src={selfImage} alt="Eric's Image" borderRadius="15px 90px" boxSize="300px" />
+            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="15px 90px" boxSize="300px" />
           </Box>
         </Flex>
       )}
