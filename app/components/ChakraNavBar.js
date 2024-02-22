@@ -25,7 +25,8 @@ export default function ChakraNavBar({ scrollToSection }) {
       position="sticky"
       top="0"
       zIndex="999"
-      maxW={{ base: '100%', md: '100%', lg: '100%' }} 
+      // maxW={{ base: '100%', md: '100%', lg: '100%' }} 
+      maxW='100%'
       mx="auto" 
     >
       <Button
@@ -35,12 +36,14 @@ export default function ChakraNavBar({ scrollToSection }) {
         fontFamily="sans-serif"
         color="white"
         // flex="1" 
-        mr="auto"
+        // mr="auto"
+        fontSize="md" // Adjusted font size
+        px="12" // Adjusted padding
       >
         ERIC ONTIVEROS
       </Button>
       <Flex
-        // flex="4" 
+        // flex="2" 
         flex={{ base: 1, md: 2 }}
         justifyContent={{ base: 'space-between', md: 'flex-end' }} 
         alignItems="center"
@@ -51,7 +54,7 @@ export default function ChakraNavBar({ scrollToSection }) {
           onClick={() => scrollWithOffset('milestones')}
           variant="ghost"
           _hover={{ color: 'teal', bg: 'transparent' }}
-          mr={2}
+          mr={1}
           color="white"
           fontSize={{ base: 'sm', md: 'md' }}
         >
@@ -61,7 +64,7 @@ export default function ChakraNavBar({ scrollToSection }) {
           onClick={() => scrollWithOffset('about')}
           variant="ghost"
           _hover={{ color: 'teal', bg: 'transparent' }}
-          mr={4}
+          mr={2}
           color="white"
           fontSize={{ base: 'sm', md: 'md' }}
         >
@@ -71,7 +74,7 @@ export default function ChakraNavBar({ scrollToSection }) {
           onClick={() => scrollWithOffset('project')}
           variant="ghost"
           _hover={{ color: 'teal', bg: 'transparent' }}
-          mr={4}
+          mr={2}
           color="white"
           fontSize={{ base: 'sm', md: 'md' }}
         >
