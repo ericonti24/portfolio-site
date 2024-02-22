@@ -4,6 +4,9 @@ import { useEffect } from 'react'
 import { ChakraProvider } from "@chakra-ui/react";
 import ChakraNavBar from './components/ChakraNavBar.js';
 import IntroSection from './intro/page.js';
+import Milestones from './milestones/page.js';
+import AboutSection from './about/page.js';
+import ProjectSection from './projects/page.js'
 
 export default function Home() {
   useEffect(() => {
@@ -24,6 +27,9 @@ export default function Home() {
       <div id='home-section'>
           <ChakraNavBar scrollToSection={scrollToSection}/>
           <IntroSection />
+          <Milestones />
+          <AboutSection />
+          <ProjectSection />
         </div>
     </ChakraProvider>
   );

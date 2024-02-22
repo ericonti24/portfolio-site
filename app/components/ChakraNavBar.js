@@ -81,6 +81,7 @@ export default function ChakraNavBar({ scrollToSection }) {
         <IconButton
         aria-label="LinkedIn"
         icon={<FaLinkedin />}
+        _hover={{ color: 'teal', bg: 'transparent' }}
         color="black"
         fontSize="md"
         href="https://www.linkedin.com/in/eontiveros"
