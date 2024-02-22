@@ -19,6 +19,7 @@ const AboutSection = () => {
     >
       <Box w="100%" textAlign="center" gridColumn="1 / -1">
         <Heading mb={4}>ABOUT ME</Heading>
+        <Text>Here you will find out more about me, and what I continue to persue in my skills in terms of programming and technology. </Text>
       </Box>
       <Box p='4' maxW='sm'>
         <Heading mb={4}>Get to know me!</Heading>
