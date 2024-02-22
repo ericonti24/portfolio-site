@@ -23,29 +23,32 @@ import {
         {PROJECTS.map((project, index) => (
         <Box
           maxW={'500px'}
-          height={'450px'}
+          height='100%'
           w={'full'}
-          bg={useColorModeValue('gray')}
+          bg={useColorModeValue('lightgray')}
           boxShadow={'5xl'}
           rounded={'md'}
-          p={6}
+          p={4}
           overflow={'hidden'}
           key={project.id}
+          mt={12}
+          mb={12}
+          border="1px solid black"
         >
-          <Box>
-          <Box h={'210px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
-           <Image h={'208px'} w={'500px'} src={project.image} alt='project-image'/>
+        <Box>
+          <Box h={'300px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+           <Image objectFit="cover" width='100%' src={project.image} alt='project-image'/>
           </Box>
           <Stack>
           <Heading
-            color={useColorModeValue('white')}
+            color={useColorModeValue('black')}
             fontSize={'2xl'}
             fontFamily={'body'}
             align={'center'}
             >
               {project.title}
             </Heading>
-            <Text color={'white'}>
+            <Text color={'black'}>
               {project.description}
             </Text>
           </Stack>
