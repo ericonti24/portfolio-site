@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { ChakraProvider } from "@chakra-ui/react";
 import ChakraNavBar from './components/ChakraNavBar.js';
+import IntroSection from './intro/page.js';
 
 export default function Home() {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function Home() {
     <ChakraProvider>
       <div id='home-section'>
           <ChakraNavBar scrollToSection={scrollToSection}/>
+          <IntroSection />
         </div>
     </ChakraProvider>
   );
