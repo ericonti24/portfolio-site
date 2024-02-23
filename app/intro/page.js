@@ -34,7 +34,6 @@ const IntroSection = () => {
         alignItems="center"
         justifyContent="center"
         mb={20}
-        // border='1px solid white'
       >
         <Box textAlign={{ base: "center", md: "left" }}>
           <Heading as="h1" fontSize="8xl" fontWeight="bold" mb={2} fontFamily='sans-serif' color='teal'>

@@ -37,8 +37,8 @@ export default function Footer() {
               href="https://www.linkedin.com/in/eontiveros"
               aria-label="LinkedIn"
               icon={<FaLinkedin />}
-              _hover={{ color: 'teal', bg: 'transparent' }}
-              color="white"
+              _hover={{ color: 'white', bg: 'transparent' }}
+              color="teal"
               target="_blank"
               rel="noopener noreferrer"
             />
@@ -47,8 +47,8 @@ export default function Footer() {
               href="https://github.com/ericonti24"
               aria-label="GitHub"
               icon={<FaGithub />}
-              _hover={{ color: 'teal', bg: 'transparent' }}
-              color="white"
+              _hover={{ color: 'white', bg: 'transparent' }}
+              color="teal"
               target="_blank"
               rel="noopener noreferrer"
             />
