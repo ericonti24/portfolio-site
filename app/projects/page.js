@@ -36,7 +36,7 @@ import {
           border="1px solid black"
         >
         <Box>
-          <Box h={'300px'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'}>
+          <Box bg={'gray.100'} mt={-6} mx={-6} mb={{ base: 6, md: "none" }} pos={'relative'}>
            <Image objectFit="cover" width='100%' src={project.image} alt='project-image'/>
           </Box>
           <Stack>
