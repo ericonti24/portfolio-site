@@ -16,7 +16,7 @@ import {
   export default function Project() {
   
     return (<Center id='project-section'>
-      <Stack spacing="24" >
+      <Stack spacing="24">
       <chakra.h3 fontSize="4xl" fontWeight="bold" textAlign="center" color={'white'}>
           PROJECTS
         </chakra.h3>
@@ -28,11 +28,10 @@ import {
           bg={useColorModeValue('lightgray')}
           boxShadow={'5xl'}
           rounded={'md'}
-          p={4}
+          p="4"
           overflow={'hidden'}
           key={project.id}
-          mt={12}
-          mb={12}
+          mb={4}
           border="1px solid black"
         >
         <Box>

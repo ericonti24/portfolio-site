@@ -2,7 +2,8 @@
 
 import { useEffect } from 'react'
 import { ChakraProvider } from "@chakra-ui/react";
-import ChakraNavBar from './components/ChakraNavBar.js';
+import NavBar from './components/NavBar.js';
+import Footer from './components/Footer.js'
 import IntroSection from './intro/page.js';
 import Milestones from './milestones/page.js';
 import AboutSection from './about/page.js';
@@ -25,11 +26,12 @@ export default function Home() {
   return (
     <ChakraProvider>
       <div id='home-section'>
-          <ChakraNavBar scrollToSection={scrollToSection}/>
+          <NavBar scrollToSection={scrollToSection}/>
           <IntroSection />
           <Milestones />
           <AboutSection />
           <ProjectSection />
+          <Footer />
         </div>
     </ChakraProvider>
   );
