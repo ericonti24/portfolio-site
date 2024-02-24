@@ -59,9 +59,9 @@ import {
             m={6}
           >
             <Button
-              _hover={{ color: 'white', bg: 'teal' }}
+              _hover={{ color: 'black', bg: 'teal' }}
               color='white'
-              bg={useColorModeValue('black')}
+              bg={useColorModeValue('teal')}
               variant='outline' 
               as="a" 
               href={project.link}
@@ -72,9 +72,9 @@ import {
                 Go to project
               </Button>
             <Button
-              _hover={{ color: 'white', bg: 'teal' }}
+              _hover={{ color: 'black', bg: 'teal' }}
               color='white'
-              bg={useColorModeValue('black')}
+              bg={useColorModeValue('teal')}
               variant='outline' 
               as="a" 
               href={project.github}
