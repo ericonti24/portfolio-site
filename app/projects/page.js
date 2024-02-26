@@ -15,7 +15,7 @@ import {
   
   export default function Project() {
   
-    return (<Center id='project-section'>
+    return (<Center id='project-section' mb={40}>
       <Stack spacing="24">
       <chakra.h3 fontSize="4xl" fontWeight="bold" textAlign="center" color={'white'}>
           PROJECTS

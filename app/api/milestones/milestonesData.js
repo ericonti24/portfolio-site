@@ -1,7 +1,7 @@
 export const MILESTONES = [
     {
         id: 1, 
-        date: "AUGUST, 2023",
+        date: "AUGUST, 2023 - JANUARY, 2024",
         title: "Inner sourced on the PayPal Experience team adding UI scripts in TestRail",
         description: "Using JQuery, HTML and CSS. Learned JQuery on the job to add button notification, loading effects, table reload functionality, data fetching to api and improve CSS styling",
     }, 
