@@ -7,10 +7,10 @@ export default function NavBar({ scrollToSection }) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768); // Adjust the breakpoint as per your design
+      setIsSmallScreen(window.innerWidth <= 768); 
     };
 
-    handleResize(); // Call it once to set the initial screen width
+    handleResize(); 
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -19,7 +19,7 @@ export default function NavBar({ scrollToSection }) {
   }, []);
 
   const scrollWithOffset = (section) => {
-    const offset = 80; //adjust to keep navbar above section 
+    const offset = 80; 
     scrollToSection(section, offset);
   };
 
@@ -158,7 +158,7 @@ export default function NavBar({ scrollToSection }) {
               target="_blank"
               rel="noopener noreferrer"
               size="sm"
-              ml={5} // Add left margin for spacing
+              ml={5} 
             />
           </>
         )}
