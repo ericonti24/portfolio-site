@@ -8,6 +8,9 @@ import IntroSection from './intro/page.js';
 import Milestones from './milestones/page.js';
 import AboutSection from './about/page.js';
 import ProjectSection from './projects/page.js'
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import ProjectDetails from './components/ProjectDetails.js';
+
 
 export default function Home() {
   useEffect(() => {

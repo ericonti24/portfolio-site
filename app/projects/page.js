@@ -12,6 +12,8 @@ import {
     chakra
   } from '@chakra-ui/react'
   import {PROJECTS} from '../api/projects/projectsData'
+  import { Link } from 'react-router-dom';
+
   
   export default function Project() {
   
@@ -84,6 +86,16 @@ import {
               >
                 Go to GitHub Repo
               </Button>
+              {/* <Button
+                _hover={{ color: 'black', bg: 'teal' }}
+                color='white'
+                bg={useColorModeValue('teal')}
+                variant='outline' 
+                as={Link} // Use Link from react-router-dom
+                to={`/project/${project.id}`} // Define dynamic route
+              >
+                View Details
+              </Button> */}
           </Stack>
         </Box>
       ))}
@@ -92,4 +104,7 @@ import {
     )
   }
   
-  
+
+
+
+
