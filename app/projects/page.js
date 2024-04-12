@@ -24,7 +24,7 @@ import {
         </chakra.h3>
         {PROJECTS.map((project, index) => (
         <Box
-          maxW={'500px'}
+          maxW={'700px'}
           height='100%'
           w={'full'}
           bg={useColorModeValue('lightgray')}

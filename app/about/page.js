@@ -32,7 +32,7 @@ const AboutSection = () => {
       </Box>
       <Box p='4'>
         <Heading mb={4}>My Skills</Heading>
-        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+        <Grid templateColumns="repeat(2, 1fr)" gap={6} textColor='white'>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
             <Text>JavaScript</Text>
           </Box>
@@ -59,6 +59,12 @@ const AboutSection = () => {
           </Box>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
             <Text>Postman</Text>
+          </Box>
+          <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
+            <Text>Tailwind</Text>
+          </Box>
+          <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
+            <Text>Firebase</Text>
           </Box>
         </Grid>
       </Box>
