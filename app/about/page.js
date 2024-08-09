@@ -37,10 +37,10 @@ const AboutSection = () => {
             <Text>JavaScript</Text>
           </Box>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
-            <Text>Ruby</Text>
+            <Text>HTML</Text>
           </Box>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
-            <Text>HTML/CSS</Text>
+            <Text>CSS</Text>
           </Box>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
             <Text>React</Text>
@@ -50,6 +50,9 @@ const AboutSection = () => {
           </Box>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
             <Text>jQuery</Text>
+          </Box>
+          <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
+            <Text>Ruby</Text>
           </Box>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
             <Text>Rails</Text>
@@ -65,6 +68,12 @@ const AboutSection = () => {
           </Box>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
             <Text>Firebase</Text>
+          </Box>
+          <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
+            <Text>PHP</Text>
+          </Box>
+          <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
+            <Text>Drupal</Text>
           </Box>
         </Grid>
       </Box>
