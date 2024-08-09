@@ -45,14 +45,14 @@ const IntroSection = () => {
         </Box>
         {!isMobile && (
           <Box>
-            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="15px 90px" boxSize="500px" />
+            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 200px" boxSize="500px" objectFit="contain"/>
           </Box>
         )}
       </Grid>
       {isMobile && (
         <Flex justifyContent="center" mt={8} mb={20}>
           <Box>
-            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="15px 90px" boxSize="300px" />
+            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 100px" boxSize="300px" objectFit="contain"/>
           </Box>
         </Flex>
       )}

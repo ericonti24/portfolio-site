@@ -86,16 +86,6 @@ import {
               >
                 Go to GitHub Repo
               </Button>
-              {/* <Button
-                _hover={{ color: 'black', bg: 'teal' }}
-                color='white'
-                bg={useColorModeValue('teal')}
-                variant='outline' 
-                as={Link} // Use Link from react-router-dom
-                to={`/project/${project.id}`} // Define dynamic route
-              >
-                View Details
-              </Button> */}
           </Stack>
         </Box>
       ))}
