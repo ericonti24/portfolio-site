@@ -33,26 +33,27 @@ const IntroSection = () => {
         gap={10}
         alignItems="center"
         justifyContent="center"
-        mb={20}
+        mb={0}
+        mt={8}
       >
-        <Box textAlign={{ base: "center", md: "left" }}>
-          <Heading as="h1" fontSize="8xl" fontWeight="bold" mb={2} fontFamily='sans-serif' color='teal'>
+        <Box textAlign={{ base: "center", md: "left" }} mt={0} >
+          <Heading as="h1" fontSize="7xl" fontWeight="bold" mt={0} fontFamily='sans-serif' color='teal'>
             Hi, I'm Eric
           </Heading>
-          <Text fontSize="2xl" color='lightgray' mb={1}>
+          <Text fontSize="4xl" color='lightgray' mt={10} >
             I enjoy web designing, developing and passionate about tech!
           </Text>
         </Box>
         {!isMobile && (
           <Box>
-            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 200px" boxSize="500px" objectFit="contain"/>
+            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 210px" boxSize="500px" objectFit="contain"/>
           </Box>
         )}
       </Grid>
       {isMobile && (
-        <Flex justifyContent="center" mt={8} mb={20}>
+        <Flex justifyContent="center" mb={10} mt={10}>
           <Box>
-            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 100px" boxSize="300px" objectFit="contain"/>
+            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 150px" boxSize="390px" objectFit="contain"/>
           </Box>
         </Flex>
       )}

@@ -1,7 +1,7 @@
 import portfolioPic from '../img_bnr/portfolio-site.png'
 import buzzedgoatvercelpic from '../img_bnr/buzzedgoatvercelpic.png'
 import favSiteSalesPic from '../img_bnr/fav-site-sales-pic.png'
-console.log(favSiteSalesPic);
+// console.log(favSiteSalesPic);
 
 export const PROJECTS = [
     {

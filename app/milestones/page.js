@@ -18,10 +18,10 @@ const Milestones = () => {
 
   useEffect(() => {
     function handleResize() {
-      setIsMobile(window.innerWidth < 768); // Adjust the width according to your breakpoint
+      setIsMobile(window.innerWidth < 768); 
     }
 
-    handleResize(); // Call once to set the initial value
+    handleResize(); 
 
     window.addEventListener('resize', handleResize);
 

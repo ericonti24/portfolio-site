@@ -1,4 +1,4 @@
-import { Flex, Button, IconButton, Menu, MenuButton, MenuList, MenuItem, Box } from '@chakra-ui/react';
+import { Flex, Button, IconButton, Menu, MenuButton, MenuList, MenuItem, Box, Spacer} from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaBars } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 
@@ -41,6 +41,7 @@ export default function NavBar({ scrollToSection }) {
       zIndex="999"
       maxW="100%"
       mx="auto"
+      // border="1px solid red"
     >
       <Button
         onClick={reloadPage}
@@ -49,11 +50,13 @@ export default function NavBar({ scrollToSection }) {
         fontFamily="sans-serif"
         color="white"
         fontSize="md"
-        px="12"
+        px="19"
+        // border="1px solid red"
       >
         ERIC ONTIVEROS
       </Button>
-      <Menu>
+      <Spacer />
+      <Menu >
         <MenuButton
           as={IconButton}
           aria-label="Options"
@@ -62,7 +65,9 @@ export default function NavBar({ scrollToSection }) {
           _hover={{ color: 'teal', bg: 'black' }}
           color="white"
           display={{ base: 'flex', md: 'none' }} // Show only on mobile
-          mr="6"
+          mr={2}
+          // ml={1}
+          // border="1px solid red"
         />
         <MenuList>
           <MenuItem 
@@ -88,7 +93,6 @@ export default function NavBar({ scrollToSection }) {
           </MenuItem>
         </MenuList>
       </Menu>
-
       <Flex
         flex={{ base: 1, md: 2 }}
         justifyContent={{ base: 'space-between', md: 'flex-end' }}
@@ -134,7 +138,7 @@ export default function NavBar({ scrollToSection }) {
           </>
         )}
 
-        {!isSmallScreen && (
+        {/* {!isSmallScreen && ( */}
           <>
             <IconButton
               aria-label="LinkedIn"
@@ -158,10 +162,10 @@ export default function NavBar({ scrollToSection }) {
               target="_blank"
               rel="noopener noreferrer"
               size="sm"
-              ml={5} 
+              ml={2} 
             />
           </>
-        )}
+        {/* )} */}
       </Flex>
     </Flex>
   );
