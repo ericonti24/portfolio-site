@@ -27,7 +27,7 @@ const IntroSection = () => {
   }, []);
 
   return (
-    <Container maxWidth="8xl" p={{ base: 2, sm: 100 }} border="1px solid red">
+    <Container maxWidth="8xl" p={{ base: 2, sm: 110 }} >
        <Grid
         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         gap={10}
