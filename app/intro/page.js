@@ -40,7 +40,7 @@ const IntroSection = () => {
           <Heading as="h1" fontSize="7xl" fontWeight="bold" mt={0} fontFamily='sans-serif' color='teal'>
             Hi, I'm Eric
           </Heading>
-          <Text fontSize="4xl" color='lightgray' mt={10} >
+          <Text fontSize="4xl" color='lightgray' mt={2} >
             I enjoy web designing, developing and passionate about tech!
           </Text>
         </Box>
