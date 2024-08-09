@@ -44,19 +44,31 @@ const IntroSection = () => {
             I enjoy web designing, developing and passionate about tech!
           </Text>
         </Box>
-        {!isMobile && (
+        {/* {!isMobile && (
           <Box>
             <Image ml={50} src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 210px" boxSize="600px" objectFit="contain"/>
           </Box>
-        )}
+        )} */}
+        <Flex justifyContent="center" mb={{base: "0", md: "0"}} mt={{base: "0", md: "0"}}>
+          <Box>
+            <Image 
+              src="/_next/static/media/self-image3.f98e0bfe.png" 
+              alt="Eric's Image" 
+              ml={{base: "0", md: "50"}}
+              borderRadius={{base: "0px 150px", md: "0px 210px"}} 
+              boxSize={{base: "390px", md: "600px"}} 
+              objectFit="contain"
+            />
+          </Box>
+        </Flex>
       </Grid>
-      {isMobile && (
+      {/* {isMobile && (
         <Flex justifyContent="center" mb={10} mt={10}>
           <Box>
             <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 150px" boxSize="390px" objectFit="contain"/>
           </Box>
         </Flex>
-      )}
+      )} */}
     </Container>
   );
 };

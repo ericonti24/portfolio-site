@@ -13,9 +13,9 @@ const AboutSection = () => {
       textAlign='center'
       mt={40}
       mb={40}
-      // border='1px solid white'
       bg='white'
-      p="10"
+      p="20"
+      height={{ base: '100%', md: '900px' }}
     >
       <Box maxW='900px' textAlign="center" gridColumn="1 / -1" >
         <Heading mb={4}>ABOUT ME</Heading>
