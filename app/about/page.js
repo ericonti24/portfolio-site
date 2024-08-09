@@ -17,16 +17,16 @@ const AboutSection = () => {
       bg='white'
       p="20"
     >
-      <Box maxW='sm' textAlign="center" gridColumn="1 / -1">
+      <Box maxW='900px' textAlign="center" gridColumn="1 / -1" >
         <Heading mb={4}>ABOUT ME</Heading>
-        <Text fontSize='xl'>Here you will find out more about me, and what I continue to persue in my skills in terms of programming and technology. </Text>
+        <Text fontSize='2xl'>Here you will find out more about me, and what I continue to persue in my skills in terms of programming and technology. </Text>
       </Box>
-      <Box p='4' maxW='sm'>
+      <Box p='4' maxW='xl' >
         <Heading mb={4}>Get to know me!</Heading>
-        <Text fontSize="xl">
+        <Text fontSize="2xl">
           Working in IT with hardware and then wanting to explore the software engineering side, I attended Flatiron school in 2021. After schooling, I continued to build and improve personal projects, as well as to learn different programming languages, frameworks, and tools.
         </Text>
-        <Text fontSize="xl" mt={4}>
+        <Text fontSize="2xl" mt={4}>
           I enjoy collaborating with others, solving problems, and continuously learning to improve my skills.
         </Text>
       </Box>
