@@ -27,7 +27,7 @@ const IntroSection = () => {
   }, []);
 
   return (
-    <Container maxWidth="7xl" p={{ base: 2, sm: 20 }} >
+    <Container maxWidth="8xl" p={{ base: 2, sm: 100 }} border="1px solid red">
        <Grid
         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
         gap={10}
@@ -46,7 +46,7 @@ const IntroSection = () => {
         </Box>
         {!isMobile && (
           <Box>
-            <Image ml={50} src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 210px" boxSize="500px" objectFit="contain"/>
+            <Image ml={50} src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 210px" boxSize="600px" objectFit="contain"/>
           </Box>
         )}
       </Grid>
