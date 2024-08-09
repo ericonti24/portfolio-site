@@ -17,7 +17,7 @@ import {
   
   export default function Project() {
   
-    return (<Center id='project-section' mb={40}>
+    return (<Center id='project-section' mb={0}>
       <Stack spacing="24">
       <chakra.h3 fontSize="4xl" fontWeight="bold" textAlign="center" color={'white'}>
           PROJECTS
@@ -37,7 +37,7 @@ import {
           border="1px solid black"
         >
         <Box>
-          <Box bg={'gray.100'} mt={-6} mx={-6} mb={{ base: 6, md: "none" }} pos={'relative'}>
+          <Box bg={'gray.100'} mt={-5} mx={-6} mb={{ base: 6, md: "none" }} pos={'relative'}>
            <Image objectFit="cover" width='100%' src={project.image} alt='project-image'/>
           </Box>
           <Stack>

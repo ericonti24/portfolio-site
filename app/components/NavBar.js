@@ -19,7 +19,7 @@ export default function NavBar({ scrollToSection }) {
   }, []);
 
   const scrollWithOffset = (section) => {
-    const offset = 80; 
+    const offset = 70; 
     scrollToSection(section, offset);
   };
 

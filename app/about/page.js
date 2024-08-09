@@ -15,7 +15,7 @@ const AboutSection = () => {
       mb={40}
       // border='1px solid white'
       bg='white'
-      p="20"
+      p="10"
     >
       <Box maxW='900px' textAlign="center" gridColumn="1 / -1" >
         <Heading mb={4}>ABOUT ME</Heading>
