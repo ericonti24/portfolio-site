@@ -42,7 +42,7 @@ import {
           overflow={'hidden'}
           key={project.id}
           mb={4}
-          border="10px solid black"
+          border="8px solid black"
         >
         <Box>
           <Box bg={'gray.100'} mt={-5} mx={-6} mb={{ base: 6, md: "none" }} pos={'relative'}>

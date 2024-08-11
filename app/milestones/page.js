@@ -29,7 +29,7 @@ const Milestones = () => {
   }, []);
 
   return (
-    <Container id='milestones-section' maxWidth="7xl" p={{ base: 4, sm: 10 }}>
+    <Container id='milestones-section' maxWidth="100%" p={{ base: 4, sm: 10 }} >
       <chakra.h3 fontSize="4xl" fontWeight="bold" mb={4} textAlign="center" color={'white'}>
         MILESTONES
       </chakra.h3>
