@@ -9,7 +9,8 @@ import {
     useColorModeValue,
     Button,
     Image,
-    chakra
+    chakra, 
+    Flex
   } from '@chakra-ui/react'
   import {PROJECTS} from '../api/projects/projectsData'
   import { Link } from 'react-router-dom';
@@ -17,16 +18,23 @@ import {
   
   export default function Project() {
   
-    return (<Center id='project-section' mb={0}>
+    return (
+    // <Center id='project-section' border="1px solid red">
+    <Flex 
+        // minHeight="100vh" 
+        id='project-section'
+        alignItems="center" 
+        justifyContent="center"
+      >
       <Stack spacing="24">
       <chakra.h3 fontSize="4xl" fontWeight="bold" textAlign="center" color={'white'}>
           PROJECTS
         </chakra.h3>
         {PROJECTS.map((project, index) => (
         <Box
-          maxW={'700px'}
+          maxW={{base: '380px', md: "700px"}}
           height='100%'
-          w={'full'}
+          // w={'full'}
           bg={useColorModeValue('lightgray')}
           boxShadow={'5xl'}
           rounded={'md'}
@@ -34,11 +42,11 @@ import {
           overflow={'hidden'}
           key={project.id}
           mb={4}
-          border="1px solid black"
+          border="10px solid black"
         >
         <Box>
           <Box bg={'gray.100'} mt={-5} mx={-6} mb={{ base: 6, md: "none" }} pos={'relative'}>
-           <Image objectFit="cover" width='100%' src={project.image} alt='project-image'/>
+           <Image objectFit="contain" width='100%' src={project.image} alt='project-image'/>
           </Box>
           <Stack>
           <Heading
@@ -90,7 +98,8 @@ import {
         </Box>
       ))}
       </Stack>
-    </Center>
+    </Flex>
+    // </Center>
     )
   }
   

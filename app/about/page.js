@@ -14,7 +14,7 @@ const AboutSection = () => {
       mt={40}
       mb={40}
       bg='white'
-      p="20"
+      p="8"
       height={{ base: '100%', md: '900px' }}
     >
       <Box maxW='900px' textAlign="center" gridColumn="1 / -1" >

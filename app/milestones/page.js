@@ -85,18 +85,18 @@ const Card = ({ id, title, description, date, isMobile }) => {
       rounded="lg"
       alignItems="center"
       pos="relative"
-      _before={{
-        content: `""`,
-        w: '0',
-        h: '0',
-        borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
-        borderStyle: 'solid',
-        borderWidth: borderWidthValue,
-        position: 'absolute',
-        left: leftValue,
-        right: rightValue,
-        display: 'block'
-      }}
+      // _before={{
+      //   content: `""`,
+      //   w: '0',
+      //   h: '0',
+      //   borderColor: `transparent ${useColorModeValue('#edf2f6', '#1a202c')} transparent`,
+      //   borderStyle: 'solid',
+      //   borderWidth: borderWidthValue,
+      //   position: 'absolute',
+      //   left: leftValue,
+      //   right: rightValue,
+      //   display: 'block'
+      // }}
     >
       <Box>
         <Text fontSize="lg" color={isEvenId ? 'teal' : 'black'}>
