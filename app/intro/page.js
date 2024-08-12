@@ -1,78 +1,116 @@
+// "use client"
+
+// import React, { useEffect, useState } from 'react';
+// import {
+//   Box,
+//   Container,
+//   Text,
+//   Flex,
+//   Heading,
+//   Grid,
+//   Image, 
+//   Center
+// } from '@chakra-ui/react';
+
+// const IntroSection = () => {
+
+//   return (
+//     <Container maxWidth="8xl" p={{ base: 2, sm: 110 }} >
+//        <Grid
+//         templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+//         gap={10}
+//         alignItems="center"
+//         justifyContent="center"
+//         mb={0}
+//         mt={8}
+//       >
+//         <Box textAlign={{ base: "center", md: "left" }} mt={6} >
+//           <Box
+//             as="span"
+//             borderBottom={{ base: '6px solid', md: '9px solid' }}
+//             borderColor={{ base: 'teal.400', md: 'teal.400'}}
+//             display="inline-block"
+//           >
+//             <Heading 
+//               fontWeight={600}
+//               fontSize={{ base: '6xl', md: '9xl' }}
+//               lineHeight={'110%'}
+//               color={'black'}
+//               textAlign="center"
+//             >
+//               Hi, I'm Eric
+//             </Heading>
+//           </Box>
+//           <Text fontSize="4xl" color='black' mt={2} >
+//             I enjoy web designing, developing and passionate about tech!
+//           </Text>
+//         </Box>
+//         <Flex justifyContent="center" mb={{base: "0", md: "0"}} mt={{base: "0", md: "0"}}>
+//           <Box>
+//             <Image 
+//               src="/_next/static/media/self-image3.f98e0bfe.png" 
+//               alt="Eric's Image" 
+//               ml={{base: "0", md: "50"}}
+//               // borderRadius={{base: "900px 900px", md: "900px 900px"}} 
+//               boxSize={{base: "390px", md: "600px"}} 
+//               objectFit="contain"
+//             />
+//           </Box>
+//         </Flex>
+//       </Grid>
+//     </Container>
+//   );
+// };
+
+// export default IntroSection;
+
+
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Box,
   Container,
   Text,
   Flex,
   Heading,
-  Grid,
-  Image
 } from '@chakra-ui/react';
-import selfImage from '../api/img_bnr/self-image3.png'
 
 const IntroSection = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); 
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
-    <Container maxWidth="8xl" p={{ base: 2, sm: 110 }} >
-       <Grid
-        templateColumns={{ base: "1fr", md: "1fr 1fr" }}
-        gap={10}
+    <Container maxWidth="8xl" p={{ base: 2, sm: 0 }} >
+      <Flex
+        direction="column"
         alignItems="center"
-        justifyContent="center"
-        mb={0}
-        mt={8}
+        justifyContent="flex-start"
+        minHeight={{ base: '490px', sm: '550px' }}
+        textAlign="center"
+        mt={{ base: 60, md: 80 }}
       >
-        <Box textAlign={{ base: "center", md: "left" }} mt={0} >
-          <Heading as="h1" fontSize="7xl" fontWeight="bold" mt={0} fontFamily='sans-serif' color='teal'>
-            Hi, I'm Eric
+        <Box
+          as="span"
+          borderBottom={{ base: '6px solid', md: '9px solid' }}
+          borderColor={{ base: 'teal.400', md: 'teal.400'}}
+          display="inline-block"
+          mb={{ base: '4', md: '4' }}
+        >
+          <Heading 
+            fontWeight={600}
+            fontSize={{ base: '6xl', md: '9xl' }}
+            lineHeight={'110%'}
+            color={'white'}
+            textAlign="center" 
+          >
+            ERIC ONTIVEROS
           </Heading>
-          <Text fontSize="4xl" color='lightgray' mt={2} >
-            I enjoy web designing, developing and passionate about tech!
-          </Text>
         </Box>
-        {/* {!isMobile && (
-          <Box>
-            <Image ml={50} src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 210px" boxSize="600px" objectFit="contain"/>
-          </Box>
-        )} */}
-        <Flex justifyContent="center" mb={{base: "0", md: "0"}} mt={{base: "0", md: "0"}}>
-          <Box>
-            <Image 
-              src="/_next/static/media/self-image3.f98e0bfe.png" 
-              alt="Eric's Image" 
-              ml={{base: "0", md: "50"}}
-              borderRadius={{base: "0px 150px", md: "0px 210px"}} 
-              boxSize={{base: "390px", md: "600px"}} 
-              objectFit="contain"
-            />
-          </Box>
-        </Flex>
-      </Grid>
-      {/* {isMobile && (
-        <Flex justifyContent="center" mb={10} mt={10}>
-          <Box>
-            <Image src="/_next/static/media/self-image3.f98e0bfe.png" alt="Eric's Image" borderRadius="0px 150px" boxSize="390px" objectFit="contain"/>
-          </Box>
-        </Flex>
-      )} */}
+        <Text fontSize={{ base: '2xl', md: '4xl' }} color='white'>
+          FULL STACK SOFTWARE ENGINEER & TECH ENTHUSIAST.
+        </Text>
+      </Flex>
     </Container>
   );
 };
 
 export default IntroSection;
-
 

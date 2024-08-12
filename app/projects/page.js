@@ -26,7 +26,7 @@ import {
         alignItems="center" 
         justifyContent="center"
       >
-      <Stack spacing="24">
+      <Stack spacing="24" mb={24}>
       <chakra.h3 fontSize="4xl" fontWeight="bold" textAlign="center" color={'white'}>
           PROJECTS
         </chakra.h3>

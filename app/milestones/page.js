@@ -80,7 +80,7 @@ const Card = ({ id, title, description, date, isMobile }) => {
     <HStack
       flex={1}
       p={{ base: 3, sm: 6 }}
-      bg='white'
+      bg={useColorModeValue('gray.100', 'gray.800')}
       spacing={5}
       rounded="lg"
       alignItems="center"
@@ -98,16 +98,16 @@ const Card = ({ id, title, description, date, isMobile }) => {
       //   display: 'block'
       // }}
     >
-      <Box>
-        <Text fontSize="lg" color={isEvenId ? 'teal' : 'black'}>
+      <Box >
+        <Text fontSize="lg" color={isEvenId ? 'teal' : 'teal'}>
           {date}
         </Text>
 
         <VStack spacing={2} mb={3} textAlign="left">
-          <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%">
+          <chakra.h1 fontSize="2xl" lineHeight={1.2} fontWeight="bold" w="100%" color="black">
             {title}
           </chakra.h1>
-          <Text fontSize="md">{description}</Text>
+          <Text fontSize="md" color="black">{description}</Text>
         </VStack>
       </Box>
     </HStack>

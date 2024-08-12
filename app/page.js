@@ -1,16 +1,13 @@
 "use client"
 
 import { useEffect } from 'react'
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import NavBar from './components/NavBar.js';
 import Footer from './components/Footer.js'
 import IntroSection from './intro/page.js';
 import Milestones from './milestones/page.js';
 import AboutSection from './about/page.js';
 import ProjectSection from './projects/page.js'
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import ProjectDetails from './components/ProjectDetails.js';
-
 
 export default function Home() {
   useEffect(() => {
