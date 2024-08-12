@@ -85,7 +85,7 @@ const IntroSection = () => {
         justifyContent="flex-start"
         minHeight={{ base: '490px', sm: '550px' }}
         textAlign="center"
-        mt={{ base: 60, md: 80 }}
+        mt={{ base: 40, md: 80 }}
       >
         <Box
           as="span"
