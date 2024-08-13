@@ -18,11 +18,16 @@ const AboutSection = () => {
       height={{ base: '100%', md: '900px' }}
     >
       <Box maxW='900px' textAlign="center" gridColumn="1 / -1" >
-        <Heading mb={4}>ABOUT ME</Heading>
+        <Heading 
+          mb={4}
+          fontFamily={'DejaVu Sans Mono, monospace'}
+        >
+          ABOUT ME
+        </Heading>
         <Text fontSize='2xl'>Here you will find out more about me, and what I continue to persue in my skills in terms of programming and technology. </Text>
       </Box>
       <Box p='4' maxW='xl' >
-        <Heading mb={4}>Get to know me!</Heading>
+        <Heading mb={4} fontFamily={'DejaVu Sans Mono, monospace'}>Get to know me!</Heading>
         <Text fontSize="2xl">
           Working in IT with hardware and then wanting to explore the software engineering side, I attended Flatiron school in 2021. After schooling, I continued to build and improve personal projects, as well as to learn different programming languages, frameworks, and tools.
         </Text>
@@ -31,7 +36,7 @@ const AboutSection = () => {
         </Text>
       </Box>
       <Box p='4'>
-        <Heading mb={4}>My Skills</Heading>
+        <Heading mb={4} fontFamily={'DejaVu Sans Mono, monospace'}>My Skills</Heading>
         <Grid templateColumns="repeat(2, 1fr)" gap={6} textColor='white'>
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
             <Text>JavaScript</Text>

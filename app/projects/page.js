@@ -27,7 +27,13 @@ import {
         justifyContent="center"
       >
       <Stack spacing="24" mb={24}>
-      <chakra.h3 fontSize="4xl" fontWeight="bold" textAlign="center" color={'white'}>
+      <chakra.h3 
+        fontSize="4xl" 
+        fontWeight="bold" 
+        textAlign="center" 
+        color={'white'}
+        fontFamily={'DejaVu Sans Mono, monospace'}
+      >
           PROJECTS
         </chakra.h3>
         {PROJECTS.map((project, index) => (

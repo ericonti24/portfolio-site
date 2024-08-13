@@ -30,7 +30,14 @@ const Milestones = () => {
 
   return (
     <Container id='milestones-section' maxWidth="100%" p={{ base: 4, sm: 10 }} >
-      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={4} textAlign="center" color={'white'}>
+      <chakra.h3 
+        fontSize="4xl" 
+        fontWeight="bold" 
+        mb={4} 
+        textAlign="center" 
+        color={'white'}
+        fontFamily={'DejaVu Sans Mono, monospace'}
+      >
         MILESTONES
       </chakra.h3>
       {MILESTONES.map((milestone) => (

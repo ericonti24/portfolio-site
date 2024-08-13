@@ -85,7 +85,7 @@ const IntroSection = () => {
         justifyContent="flex-start"
         minHeight={{ base: '490px', sm: '550px' }}
         textAlign="center"
-        mt={{ base: 40, md: 80 }}
+        mt={{ base: 140, md: 80 }}
       >
         <Box
           as="span"
@@ -93,18 +93,24 @@ const IntroSection = () => {
           borderColor={{ base: 'teal.400', md: 'teal.400'}}
           display="inline-block"
           mb={{ base: '4', md: '4' }}
+          width={{base: '310px', md: 'auto'}}
         >
           <Heading 
             fontWeight={600}
-            fontSize={{ base: '6xl', md: '9xl' }}
+            fontSize={{ base: '4xl', md: '9xl' }}
             lineHeight={'110%'}
             color={'white'}
             textAlign="center" 
+            fontFamily={'DejaVu Sans Mono, monospace'}
           >
             ERIC ONTIVEROS
           </Heading>
         </Box>
-        <Text fontSize={{ base: '2xl', md: '4xl' }} color='white'>
+        <Text 
+          fontSize={{ base: '2xl', md: '4xl' }} 
+          color='white' 
+          fontFamily={'DejaVu Sans Mono, monospace'}
+        >
           FULL STACK SOFTWARE ENGINEER & TECH ENTHUSIAST.
         </Text>
       </Flex>

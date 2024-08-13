@@ -12,6 +12,7 @@ export default function Footer() {
       }}
       bg="black"
       maxW="100%"
+      fontFamily={'DejaVu Sans Mono, monospace'}
     >
       <Stack
         justify={{ base: 'center', md: 'space-between' }}
