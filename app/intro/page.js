@@ -78,14 +78,15 @@ import {
 
 const IntroSection = () => {
   return (
-    <Container maxWidth="8xl" p={{ base: 2, sm: 0 }} >
+    <Container maxWidth="8xl" >
       <Flex
         direction="column"
         alignItems="center"
-        justifyContent="flex-start"
-        minHeight={{ base: '490px', sm: '550px' }}
+        justifyContent="center"
+        minHeight={{ base: '470px', sm: '550px' }}
         textAlign="center"
-        mt={{ base: 140, md: 80 }}
+        mt={{ base: 10, md: 40 }}
+        mb={{ base: 40, md: 60 }}
       >
         <Box
           as="span"
