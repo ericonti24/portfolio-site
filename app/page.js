@@ -23,6 +23,7 @@ export default function Home() {
       });
     }
   };
+
   return (
     <ChakraProvider>
       <div id='home-section'>

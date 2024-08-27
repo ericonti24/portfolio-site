@@ -112,7 +112,7 @@ const IntroSection = () => {
           color='white' 
           fontFamily={'DejaVu Sans Mono, monospace'}
         >
-          FULL STACK SOFTWARE ENGINEER & TECH ENTHUSIAST.
+          FREELANCE FULL STACK SOFTWARE ENGINEER & TECH ENTHUSIAST.
         </Text>
       </Flex>
     </Container>

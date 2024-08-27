@@ -34,7 +34,7 @@ import {
         color={'white'}
         fontFamily={'DejaVu Sans Mono, monospace'}
       >
-          PROJECTS
+          PERSONAL PROJECTS
         </chakra.h3>
         {PROJECTS.map((project, index) => (
         <Box

@@ -80,6 +80,9 @@ const AboutSection = () => {
           <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
             <Text>Drupal</Text>
           </Box>
+          <Box bg="teal" p={2} textAlign="center" borderRadius={8}>
+            <Text>Squarespace</Text>
+          </Box>
         </Grid>
       </Box>
     </Grid>
