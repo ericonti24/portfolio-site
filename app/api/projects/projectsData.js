@@ -1,8 +1,7 @@
 // import portfolioPic from '../img_bnr/portfolio-site.png'
 import buzzedgoatvercelpic from '../img_bnr/buzzedgoatvercelpic.png'
 import favSiteSalesPic from '../img_bnr/fav-site-sales-pic.png'
-// import portfolioPic from '../img_bnr/newPortfolioPic.png'
-import portfolioPic from '../img_bnr/PFPic.png'
+import portfolioPic from '../img_bnr/newPI.png'
 // console.log(portfolioPic);
 
 export const PROJECTS = [
@@ -39,8 +38,7 @@ export const PROJECTS = [
     }, 
     {
         id: 4,
-        // image: "/_next/static/media/newPortfolioPic.9b2f641b.png",
-        image: "/_next/static/media/PFPic.c9899311.png",
+        image: "/_next/static/media/newPI.ee09f493.png",
         title: "Portfolio Site", 
         description: "Personal portfolio site to display other development projects and share about and contact information. Using React framework Next.js and Chakra UI for styling. Hosted on Vercel.",
         link: "https://ericontiveros-portfolio-site.vercel.app/",
