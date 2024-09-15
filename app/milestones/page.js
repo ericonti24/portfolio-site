@@ -61,7 +61,7 @@ const Milestones = () => {
         p={4}
       >
         <Heading
-          fontSize={{ base: '6xl', md: '8xl' }}
+          fontSize={{ base: '5xl', md: '8xl' }}
           mb={10}
           fontFamily={'DejaVu Sans Mono, monospace'}
           color='black'

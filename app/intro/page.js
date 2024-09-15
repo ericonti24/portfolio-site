@@ -112,7 +112,7 @@ export default function IntroSection() {
         />
 
         <Text 
-          fontSize={{ base: "2xl", md: "xl"}} 
+          fontSize={{ base: "md", md: "xl"}} 
           textAlign={{ base: 'center', md: 'center' }} 
           fontWeight='bold'
           color='white'
@@ -129,9 +129,13 @@ export default function IntroSection() {
         width={{ base: '100%', md: '45%' }}
         float={{ base: 'none', md: 'right' }} 
         // border="1px solid red" 
-        mb={{ base: '12', md: '12'}}
+        mb={{ base: '20', md: 'none'}}
       >
-        <Image src={codingImage} alt='Coding Image' boxSize={{base: 'none', md: '620px'}}/>
+        <Image 
+          src={codingImage} 
+          alt='Coding Image' 
+          boxSize={{base: 'none', md: '620px'}}
+        />
       </Box>
     </>
   );

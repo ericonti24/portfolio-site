@@ -19,7 +19,7 @@ const AboutSection = () => {
     >
       <Box maxW='900px' textAlign="center" gridColumn="1 / -1" >
         <Heading 
-          fontSize={{ base: '6xl', md: '8xl' }}
+          fontSize={{ base: '5xl', md: '8xl' }}
           mb={10}
           fontFamily={'DejaVu Sans Mono, monospace'}
         >

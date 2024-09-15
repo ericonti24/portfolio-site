@@ -37,7 +37,7 @@ import {
       <Stack spacing="24" mb={24}>
         {PROJECTS.map((project, index) => (
         <Box
-          maxW={{base: '380px', md: "700px"}}
+          maxW={{base: '370px', md: "700px"}}
           bg={useColorModeValue('white')}
           boxShadow={'5xl'}
           rounded={'xl'}
