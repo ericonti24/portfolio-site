@@ -1,3 +1,4 @@
+'use client'
 import { Box, Button, Heading, Text, Flex, Image } from '@chakra-ui/react';
 import { scrollToSection } from '../components/scrollToSection';
 import image from '../api/img_bnr/codingImage.png'
