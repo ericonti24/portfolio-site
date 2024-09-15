@@ -1,7 +1,7 @@
 // import portfolioPic from '../img_bnr/portfolio-site.png'
 import buzzedgoatvercelpic from '../img_bnr/buzzedgoatvercelpic.png'
 import favSiteSalesPic from '../img_bnr/fav-site-sales-pic.png'
-import portfolioPic from '../img_bnr/newPI.png'
+import portfolioPic from '../img_bnr/portfolioIntoPic.png'
 // console.log(portfolioPic);
 
 export const PROJECTS = [
@@ -14,13 +14,6 @@ export const PROJECTS = [
         github: "https://github.com/ericonti24/coffee-shop-site-clone"
     }, 
     {
-        // id: 2,
-        // image: "https://screenshot-proxy.netlify.app/f_avif,w_336/https://d33wubrfki0l68.cloudfront.net/645d7c6f0be73a00088c1574/screenshot_2023-05-11-23-38-57-0000.png",
-        // title: "Front End React Calendar", 
-        // description: "Calendar web page using React.js with day.js library. Hosted on Netlify.",
-        // link: "https://cheery-clafoutis-925e19.netlify.app/",
-        // github: "https://github.com/ericonti24/calendar_app"
-
         id: 2,
         image: "/_next/static/media/fav-site-sales-pic.e1d89911.png",
         title: "Fav Site Sales", 
@@ -38,7 +31,7 @@ export const PROJECTS = [
     }, 
     {
         id: 4,
-        image: "/_next/static/media/newPI.ee09f493.png",
+        image: "/_next/static/media/portfolioIntoPic.8e10526b.png",
         title: "Portfolio Site", 
         description: "Personal portfolio site to display other development projects and share about and contact information. Using React framework Next.js and Chakra UI for styling. Hosted on Vercel.",
         link: "https://ericontiveros-portfolio-site.vercel.app/",

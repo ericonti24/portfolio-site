@@ -13,14 +13,11 @@ import {
     Flex
   } from '@chakra-ui/react'
   import {PROJECTS} from '../api/projects/projectsData'
-  import { FaLinkedin, FaGithub, FaBars } from 'react-icons/fa';
-  import { Link } from 'react-router-dom';
-
   
   export default function Project() {
   
     return (
-    <Center id='project-section' >
+    <Center id='project-section' bg='white' >
     <Flex 
         direction="column"
         alignItems="center"
@@ -33,7 +30,7 @@ import {
           fontSize={{ base: '5xl', md: '8xl' }}
           mb={10}
           fontFamily={'DejaVu Sans Mono, monospace'}
-          color='white'
+          color='black'
         >
           PERSONAL PROJECTS
         </Heading>
@@ -48,7 +45,7 @@ import {
           overflow={'hidden'}
           key={project.id}
           mb={4}
-          border="8px solid white"
+          border="8px solid black"
         >
         <Box>
           

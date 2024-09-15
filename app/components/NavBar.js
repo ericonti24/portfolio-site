@@ -1,15 +1,21 @@
 'use client'
 
-import { Flex, Button, IconButton, Menu, MenuButton, MenuList, MenuItem, Box, Spacer } from '@chakra-ui/react';
-import { FaLinkedin, FaGithub, FaBars } from 'react-icons/fa';
+import { Flex, Button, IconButton, Menu, MenuButton, MenuList, MenuItem, Box } from '@chakra-ui/react';
+import { FaBars } from 'react-icons/fa';
 import Link from 'next/link';
+import styles from '../styles/NavBar.module.css'
 
-export default function NavBar() {
+export default function NavBar({scrollToSection}) {
+
+    const scrollWithOffset = (section) => {
+      const offset = 70; 
+      scrollToSection(section, offset);
+    };
 
   return (
     <Flex
-      p="4"
-      bg="black"
+      p="3"
+      bg="transparent"
       alignItems="center"
       justifyContent="space-between"
       flexWrap="wrap"
@@ -19,16 +25,16 @@ export default function NavBar() {
       maxW="100%"
       mx="auto"
       fontFamily={'DejaVu Sans Mono, monospace'}
+      className={styles.navbar}
     >
       <Link href="/" passHref>
         <Button
-          // onClick={reloadPage}
           variant="ghost"
           _hover={{ color: 'none', bg: 'transparent' }}
-          color="white"
+          color="black"
           fontSize="4xl"
-          bg='black'
-          px="19"
+          bg='transparent'
+          px="0"
           fontFamily={'DejaVu Sans Mono, monospace'}
         >
           EO
@@ -36,81 +42,78 @@ export default function NavBar() {
       </Link>
       <Flex flex="1" justifyContent="center" alignItems="center">
         <Box display={{ base: 'none', md: 'flex' }}>
-        <Link href="/milestones" passHref>
           <Button
-              bg='black'
+              onClick={() => scrollWithOffset('milestones')}
+              bg='transparent'
               variant="ghost"
               _hover={{
                 color: 'none',
-                bg: 'black',
+                bg: 'transparent',
                 _before: {
                   content: '""',
                   display: 'block',
                   width: '100%',
                   height: '2px',
-                  backgroundColor: 'white',
+                  backgroundColor: 'black',
                   position: 'absolute',
                   bottom: '-2px',
                   left: '0',
                 },
               }}
-              color="white"
+              color="black"
               fontSize={{ base: 'sm', md: 'md' }}
               mx={2}
             >
               Milestones
             </Button>
-          </Link>
-          <Link href="/about" passHref>
             <Button
-              bg='black'
+              onClick={() => scrollWithOffset('about')}
+              bg='transparent'
               variant="ghost"
               _hover={{
                 color: 'none',
-                bg: 'black',
+                bg: 'transparent',
                 _before: {
                   content: '""',
                   display: 'block',
                   width: '100%',
                   height: '2px',
-                  backgroundColor: 'white',
+                  backgroundColor: 'black',
                   position: 'absolute',
                   bottom: '-2px',
                   left: '0',
                 },
               }}
-              color="white"
+              color="black"
               fontSize={{ base: 'sm', md: 'md' }}
               mx={2}
             >
               About
             </Button>
-          </Link>
-          <Link href="/projects" passHref>
             <Button
-              bg='black'
+              onClick={() => scrollWithOffset('project')}
+              bg='transparent'
               variant="ghost"
               _hover={{
                 color: 'none',
-                bg: 'black',
+                bg: 'transparent',
                 _before: {
                   content: '""',
                   display: 'block',
                   width: '100%',
                   height: '2px',
-                  backgroundColor: 'white',
+                  backgroundColor: 'black',
                   position: 'absolute',
                   bottom: '-2px',
                   left: '0',
                 },
               }}
-              color="white"
+              color="black"
               fontSize={{ base: 'sm', md: 'md' }}
               mx={2}
             >
               Projects
             </Button>
-          </Link>
         </Box>
       </Flex>
 
@@ -120,37 +123,33 @@ export default function NavBar() {
           aria-label="Options"
           icon={<FaBars />}
           variant="ghost"
-          _hover={{ color: 'white', bg: 'black' }}
-          color="white"
-          display={{ base: 'flex', md: 'none' }} // Show only on mobile
+          _hover={{ color: 'black', bg: 'transparent' }}
+          color="black"
+          display={{ base: 'flex', md: 'none' }} 
           mr={2}
         />
-        <MenuList >
-          <Link href='/milestones' passHref>
-            <MenuItem 
-              _hover={{ color: 'white', bg: 'black' }}
-              color="black"
-              variant="ghost"
-            >
-              Milestones
-            </MenuItem>
-          </Link>
-          <Link href="/about" passHref>
-            <MenuItem 
-              _hover={{ color: 'white', bg: 'black' }}
-              color="black"
-            >
-              About
-            </MenuItem>
-          </Link>
-          <Link href="/projects" passHref>
-            <MenuItem 
-              _hover={{ color: 'white', bg: 'black' }}
-              color="black"
-            >
-              Projects
-            </MenuItem>
-          </Link>
+        <MenuList>
+          <MenuItem 
+            _hover={{ color: 'white', bg: 'black' }}
+            color="black"
+            onClick={() => scrollWithOffset('milestones')} 
+          >
+            Milestones
+          </MenuItem>
+          <MenuItem 
+            _hover={{ color: 'white', bg: 'black' }}
+            color="black"
+            onClick={() => scrollWithOffset('about')} 
+          >
+            About
+          </MenuItem>
+          <MenuItem 
+            _hover={{ color: 'white', bg: 'black' }}
+            color="black"
+            onClick={() => scrollWithOffset('project')} 
+          >
+            Projects
+          </MenuItem>
         </MenuList>
       </Menu>
     </Flex>

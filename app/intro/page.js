@@ -1,174 +1,137 @@
-"use client";
+import { Box, Button, Heading, Text, Flex, Image } from '@chakra-ui/react';
+import { scrollToSection } from '../components/scrollToSection';
+import image from '../api/img_bnr/codingImage.png'
+// console.log(image);
 
-import React from 'react';
-import {
-  Container,
-  Text,
-  Flex,
-  Heading,
-  Image,  
-  Box, 
-  IconButton
-} from '@chakra-ui/react';
-import { FaLinkedin, FaGithub, FaBars } from 'react-icons/fa';
 
-const IntroSection = () => {
-  const SelfImage = "/img_bnr/self-image3.png";
+export default function IntroSection() {
+  const codingImage = "/_next/static/media/codingImage.0cd690b6.png"
+
+  const scrollWithOffset = (section) => {
+    const offset = 70; 
+    scrollToSection(section, offset);
+  };
 
   return (
-    <Container 
-      pt={{ base: 'none', md: 16 }} 
-      display="flex" 
-      alignItems="center" 
-      justifyContent="center"
-      position="relative"
-    >
-      <Flex
-        direction={{ base: 'column-reverse', md: 'row' }} // Stack image on top of text on mobile, row on desktop
-        alignItems="center"
-        justifyContent="center" // Center the content horizontally and vertically
-        textAlign={{ base: 'center', md: 'left' }} // Center text on mobile, left-align on desktop
-        w="full"
-        spacing={{ base: 4, md: 8 }} // Space between items
-        // height={{ base: 'auto', md: '3xl' }} // Match height with the image on desktop
+    <>
+      <Box
+        textAlign={{ base: 'center', md: 'left' }}
+        alignItems={{ base: 'center', md: 'flex-start' }}
+        // border='1px solid red'
+        width={{ base: '100%', md: 'fit-content' }}
+        float={{ base: 'none', md: 'left' }} 
+        mb={{ base: '6', md: '0' }} 
+        mt={{ base: '6', md: '40' }}
       >
-        {/* Left Side: Heading and Text */}
-        <Flex
-          flex="1"
-          direction="column"
-          justifyContent="center" // Center content vertically
-          align="center"
-          textAlign={{ base: 'center', md: 'left' }}
-          p={{ base: 'none', md: '2' }}
-          // height="100%" // Make the flex container take full height
-          // border='1px solid red'
+        <Heading 
+          as="h1" 
+          fontSize={{ base: '6xl', md: '160px' }} 
+          fontFamily={'DejaVu Sans Mono, monospace'}
+          color='white'
         >
-          <Box 
-            p={{base: '0', md: '13'}}
-            position="relative"
+          Eric
+        </Heading>
+        <Heading 
+          as="h1" 
+          fontSize={{ base: '6xl', md: '160px' }} 
+          mb="0" 
+          fontFamily={'DejaVu Sans Mono, monospace'}
+          color='black'
+        >
+          Ontiveros
+        </Heading>
+        
+        {/* Button Container */}
+        <Flex justifyContent="center" mt="4"> 
+          <Button 
+            onClick={() => scrollWithOffset('project')}
+            size="lg" 
+            bg='transparent' 
+            color='white' 
+            border='4px solid white'
+            mb={{ base: '4', md: '0' }} 
+            _hover={{color: 'none'}}
           >
-            {/* Top Left Corner */}
-            <Box
-              position="absolute"
-              top={0}
-              left={0}
-              width="20px"
-              height="20px"
-              borderTop={`2px solid white`}
-              borderLeft={`2px solid white`}
-            />
-
-            {/* Top Right Corner */}
-            <Box
-              position="absolute"
-              top={0}
-              right={0}
-              width="20px"
-              height="20px"
-              borderTop={`2px solid white`}
-              borderRight={`2px solid white`}
-            />
-
-            {/* Bottom Left Corner */}
-            <Box
-              position="absolute"
-              bottom={0}
-              left={0}
-              width="20px"
-              height="20px"
-              borderBottom={`2px solid white`}
-              borderLeft={`2px solid white`}
-            />
-
-            {/* Bottom Right Corner */}
-            <Box
-              position="absolute"
-              bottom={0}
-              right={0}
-              width="20px"
-              height="20px"
-              borderBottom={`2px solid white`}
-              borderRight={`2px solid white`}
-            />
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: '5xl', md: '9xl' }}
-              lineHeight={'110%'}
-              color={'white'}
-              textDecoration="underline" // Underline the heading
-              fontFamily={'DejaVu Sans Mono, monospace'}
-            >
-              ERIC ONTIVEROS
-            </Heading>
-            <Text
-              fontSize={{ base: '2xl', md: '4xl' }}
-              color='white'
-              fontFamily={'DejaVu Sans Mono, monospace'}
-              mt={{ base: '4', md: '8' }}
-            >
-              SOFTWARE ENGINEER & TECH ENTHUSIAST.
-            </Text>
-            <Text
-              fontSize={{ base: 'sm', md: 'md' }}
-              color='white'
-              fontFamily={'DejaVu Sans Mono, monospace'}
-              mt={{ base: '4', md: '8' }}
-            >
-              I am a passionate Software Engineer with a focus on creating dynamic web applications using modern web technologies. 
-              I thrive on problem-solving and continuously look for ways to improve efficiency and usability across my projects.            
-            </Text>
-            {/* Social Media Icons */}
-            <Flex flex="1" justifyContent="center" mt={{ base: '1', md: '14' }}>
-              <IconButton
-                as='a'
-                aria-label="LinkedIn"
-                icon={<FaLinkedin />}
-                variant="ghost"
-                color="white"
-                fontSize="lg"
-                href="https://www.linkedin.com/in/eontiveros"
-                target="_blank"
-                rel="noopener noreferrer"
-                ml={4}
-                bg='black'
-                _hover={{
-                  color: 'none',
-                  bg: 'black',
-                }}
-              />
-              <IconButton
-                as='a'
-                aria-label="GitHub"
-                icon={<FaGithub />}
-                variant="ghost"
-                color="white"
-                fontSize="lg"
-                href="https://github.com/ericonti24"
-                target="_blank"
-                rel="noopener noreferrer"
-                ml={4}
-                bg='black'
-                _hover={{
-                  color: 'none',
-                  bg: 'black',
-                }}
-              />
-            </Flex>
-          </Box>
+            My Projects
+          </Button>
         </Flex>
-        {/* Right Side: Image */}
-        <Image
-          src={SelfImage}
-          alt="Eric Ontiveros"
-          objectFit="contain" 
-          boxSize={{ base: "xs", md: "2xl" }} // Ensure the image takes the same height as the Flex
-          mb={{ base: '6', md: '0' }}
-          // border='1px solid white'
-          // filter='grayscale(100%)'
-        />
-      </Flex>
-    </Container>
-  );
-};
+      </Box>
 
-export default IntroSection;
+      {/* Right Side - Text */}
+      <Box 
+        p={{ base: '4', md: '4' }}
+        position="relative"
+        width={{ base: '100%', md: '50%' }} 
+        float={{ base: 'none', md: 'right' }} 
+        mt={{ base: '6', md: '60' }} 
+        // border="1px solid red" 
+      >
+        {/* Top Left Corner */}
+        <Box
+          position="absolute"
+          top={0}
+          left={0}
+          width="20px"
+          height="20px"
+          borderTop="4px solid black"
+          borderLeft="4px solid black"
+        />
+
+        {/* Top Right Corner */}
+        <Box
+          position="absolute"
+          top={0}
+          right={0}
+          width="20px"
+          height="20px"
+          borderTop="4px solid black"
+          borderRight="4px solid black"
+        />
+
+        {/* Bottom Left Corner */}
+        <Box
+          position="absolute"
+          bottom={0}
+          left={0}
+          width="20px"
+          height="20px"
+          borderBottom="4px solid black"
+          borderLeft="4px solid black"
+        />
+
+        {/* Bottom Right Corner */}
+        <Box
+          position="absolute"
+          bottom={0}
+          right={0}
+          width="20px"
+          height="20px"
+          borderBottom="4px solid black"
+          borderRight="4px solid black"
+        />
+
+        <Text 
+          fontSize={{ base: "2xl", md: "xl"}} 
+          textAlign={{ base: 'center', md: 'center' }} 
+          fontWeight='bold'
+          color='white'
+          fontFamily={'DejaVu Sans Mono, monospace'}
+        >
+          Software Engineer with a focus on creating dynamic web applications
+          using modern web technologies.
+        </Text>
+      </Box>
+
+      {/* Image Box */}
+      <Box 
+        position="relative"
+        width={{ base: '100%', md: '45%' }}
+        float={{ base: 'none', md: 'right' }} 
+        // border="1px solid red" 
+        mb={{ base: '12', md: '12'}}
+      >
+        <Image src={codingImage} alt='Coding Image' boxSize={{base: 'none', md: '620px'}}/>
+      </Box>
+    </>
+  );
+}

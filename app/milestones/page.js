@@ -29,6 +29,7 @@ const Milestones = () => {
 
   return (
     <Container
+      id='milestones-section'
       maxWidth="100%"
       p={0}
       m={0}
@@ -36,6 +37,8 @@ const Milestones = () => {
       position="relative"
       overflow="hidden"
       fontFamily={'DejaVu Sans Mono, monospace'}
+      bg='white'
+      // border='solid black'
     >
       {/* Background */}
       <Box
@@ -58,10 +61,10 @@ const Milestones = () => {
         p={4}
       >
         <Heading
-          fontSize={{ base: '5xl', md: '8xl' }}
+          fontSize={{ base: '6xl', md: '8xl' }}
           mb={10}
           fontFamily={'DejaVu Sans Mono, monospace'}
-          color='white'
+          color='black'
         >
           MILESTONES
         </Heading>
@@ -94,8 +97,8 @@ const Milestones = () => {
               left={0}
               width="20px"
               height="20px"
-              borderTop={`2px solid white`}
-              borderLeft={`2px solid white`}
+              borderTop={`4px solid black`}
+              borderLeft={`4px solid black`}
             />
 
             {/* Top Right Corner */}
@@ -105,8 +108,8 @@ const Milestones = () => {
               right={0}
               width="20px"
               height="20px"
-              borderTop={`2px solid white`}
-              borderRight={`2px solid white`}
+              borderTop={`4px solid black`}
+              borderRight={`4px solid black`}
             />
 
             {/* Bottom Left Corner */}
@@ -116,8 +119,8 @@ const Milestones = () => {
               left={0}
               width="20px"
               height="20px"
-              borderBottom={`2px solid white`}
-              borderLeft={`2px solid white`}
+              borderBottom={`4px solid black`}
+              borderLeft={`4px solid black`}
             />
 
             {/* Bottom Right Corner */}
@@ -127,8 +130,8 @@ const Milestones = () => {
               right={0}
               width="20px"
               height="20px"
-              borderBottom={`2px solid white`}
-              borderRight={`2px solid white`}
+              borderBottom={`4px solid black`}
+              borderRight={`4px solid black`}
             />
 
             {/* Content */}
@@ -136,10 +139,10 @@ const Milestones = () => {
               {milestone.date}
             </Text>
             <VStack spacing={2} mb={3} alignItems="center" textAlign="center">
-              <Heading fontSize="2xl" color="white" fontFamily={font}>
+              <Heading fontSize="2xl" color="black" fontFamily={font}>
                 {milestone.title}
               </Heading>
-              <Text fontSize="md" color="white" fontFamily={font}>
+              <Text fontSize="lg" color="black" fontFamily={font}>
                 {milestone.description}
               </Text>
             </VStack>
