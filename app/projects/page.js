@@ -37,7 +37,7 @@ import {
       <Stack spacing="24" mb={24}>
         {PROJECTS.map((project, index) => (
         <Box
-          maxW={{base: '300px', md: "700px"}}
+          maxW={{base: '330px', md: "700px"}}
           bg={useColorModeValue('white')}
           boxShadow={'5xl'}
           rounded={'xl'}
@@ -72,7 +72,7 @@ import {
           </Box>
           <Stack 
             direction='row' 
-            spacing={4} 
+            spacing={{base: '2', md: '20'}} 
             justifyContent={'center'} 
           >
             <Button
