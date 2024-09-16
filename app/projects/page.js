@@ -37,7 +37,7 @@ import {
       <Stack spacing="24" mb={24}>
         {PROJECTS.map((project, index) => (
         <Box
-          maxW={{base: '370px', md: "700px"}}
+          maxW={{base: '300px', md: "700px"}}
           bg={useColorModeValue('white')}
           boxShadow={'5xl'}
           rounded={'xl'}
@@ -86,7 +86,7 @@ import {
               rel='noopener noreferrer'
               border='none'
               fontFamily={'DejaVu Sans Mono, monospace'}
-              size={{base: 'md', mb: 'md'}}
+              size={{base: 'sm', mb: 'md'}}
               >
                 Go to project
               </Button>
@@ -101,7 +101,7 @@ import {
               rel='noopener noreferrer'
               border='none'
               fontFamily={'DejaVu Sans Mono, monospace'}
-              size={{base: 'md', mb: 'md'}}
+              size={{base: 'sm', mb: 'md'}}
               >
                 Go to GitHub Repo
               </Button>
