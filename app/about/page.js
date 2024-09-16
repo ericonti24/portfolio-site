@@ -74,10 +74,10 @@ const AboutSection = () => {
           borderBottom="4px solid black"
           borderRight="4px solid black"
         />
-        <Text fontSize="xl" >
+        <Text fontSize={{base: "2xl", md: "1xl"}} >
           Working in IT with hardware and then wanting to explore the software engineering side, I attended Flatiron school in 2021. After schooling, I continued to build and improve personal projects, as well as to learn different programming languages, frameworks, and tools.
         </Text>
-        <Text fontSize="xl" mt={4}>
+        <Text fontSize={{base: "2xl", md: "1xl"}} mt={4}>
           I enjoy collaborating with others, solving problems, and continuously learning to improve my skills.
         </Text>
         </Box>
