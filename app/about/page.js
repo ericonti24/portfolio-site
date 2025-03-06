@@ -1,9 +1,37 @@
 'use client'
 
 import { Box, Flex, Heading, Text, VStack, Grid } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
+import {fetchAboutSectionData, fetchMySkillsData} from '../contentful/config'
 
 
 const AboutSection = () => {
+  const [aboutSectionData, setAboutSectionData] = useState(null)
+  const [mySkilsData, setMySkillsData] = useState(null)
+
+  useEffect(() => {
+    const aboutData = async () => {
+      const data = await fetchAboutSectionData();
+      setAboutSectionData(data)
+    }
+    aboutData()
+  }, [])
+
+  useEffect(() => {
+    const fetchSkills = async () => {
+      const data = await fetchMySkillsData();
+      setMySkillsData(data);
+    };
+    fetchSkills();
+  }, []);
+  
+
+  if (!aboutSectionData) return null;
+  if (!mySkilsData) return null;
+
+  const {description} = aboutSectionData
+  const {skills} = mySkilsData
+
   return (
     <Grid
       id="about-section"
@@ -12,7 +40,7 @@ const AboutSection = () => {
       justifyItems="center"
       textAlign='center'
       mt={20}
-      mb={20}
+      mb={40}
       p="8"
       height={{ base: '100%', md: '100vh' }}
       color='white'
@@ -74,11 +102,8 @@ const AboutSection = () => {
           borderBottom="4px solid black"
           borderRight="4px solid black"
         />
-        <Text fontSize={{base: "2xl", md: "1xl"}} >
-          Working in IT with hardware and then wanting to explore the software engineering side, I attended Flatiron school in 2021. After schooling, I continued to build and improve personal projects, as well as to learn different programming languages, frameworks, and tools.
-        </Text>
         <Text fontSize={{base: "2xl", md: "1xl"}} mt={4}>
-          I enjoy collaborating with others, solving problems, and continuously learning to improve my skills.
+          {description}
         </Text>
         </Box>
       </Box>
@@ -91,7 +116,12 @@ const AboutSection = () => {
         // border='1px solid red'
         fontSize={'xl'}
         >
-          <Box bg="black" p={2} textAlign="center" borderRadius={8}>
+          {skills.map((skill, index) => (
+            <Box key={index} bg="black" p={2} textAlign="center" borderRadius={8}>
+              <Text>{skill}</Text>
+            </Box>
+          ))}
+          {/* <Box bg="black" p={2} textAlign="center" borderRadius={8}>
             <Text>JavaScript</Text>
           </Box>
           <Box bg="black" p={2} textAlign="center" borderRadius={8}>
@@ -135,7 +165,7 @@ const AboutSection = () => {
           </Box>
           <Box bg="black" p={2} textAlign="center" borderRadius={8}>
             <Text>Squarespace</Text>
-          </Box>
+          </Box> */}
         </Grid>
       </Box>
     </Grid>

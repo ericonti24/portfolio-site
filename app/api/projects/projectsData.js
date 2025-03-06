@@ -8,7 +8,7 @@ export const PROJECTS = [
     {
         id: 1,
         image: '/_next/static/media/buzzedgoatvercelpic.75a3ebd8.png',
-        title: "Frontend Coffee Shop Site Teplet", 
+        title: "Frontend Coffee Shop Site Templet", 
         description: "A frontend coffee shop site templet inspired by the coffee shop The Buzzed Goat site. I wanted to see how I would rebuild the frontend from the original site. The site is built with Next.js as front end and Chakra UI for styling and hosted on Vercel.",
         link: "https://buzzedgoat-coffee-shop-inspiration-site.vercel.app/",
         github: "https://github.com/ericonti24/coffee-shop-site-clone"

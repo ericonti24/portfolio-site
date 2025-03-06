@@ -1,6 +1,5 @@
 'use client'
 import NavBar from './components/NavBar';
-import Footer from './components/Footer';
 import { metadata } from '../app/components/metadata';
 import { ChakraProvider, Box } from '@chakra-ui/react';
 import { useEffect } from 'react';

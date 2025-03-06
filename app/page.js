@@ -1,5 +1,3 @@
-"use client"
-
 import NavBar from './components/NavBar.js';
 import Footer from './components/Footer.js'
 import IntroSection from './intro/page.js';
